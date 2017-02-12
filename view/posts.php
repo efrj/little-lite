@@ -5,7 +5,7 @@
             <small>By Litte Lite MVC Example</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/">Home</a>
+            <li><a href="index.php">Home</a>
             </li>
             <li class="active">Blog Home</li>
         </ol>
@@ -27,11 +27,11 @@
         </a>
     </div>
     <div class="col-md-6">
-        <h3><a href="/index.php?PostController/postView/<?=$posts[$p]['id']?>"><?=strtoupper($posts[$p]['title'])?></a>
+        <h3><a href="index.php?PostController/postView/<?=$posts[$p]['id']?>"><?=strtoupper($posts[$p]['title'])?></a>
         </h3>
-        <p>by <a href="/index.php?PostController/postView/<?=$posts[$p]['id']?>">Litte Lite MVC Example</a></p>
+        <p>by <a href="index.php?PostController/postView/<?=$posts[$p]['id']?>">Litte Lite MVC Example</a></p>
         <p><?=$posts[$p]['body']?></p>
-        <a class="btn btn-primary" href="/index.php?PostController/postView/<?=$posts[$p]['id']?>">Read More <i class="fa fa-angle-right"></i></a>
+        <a class="btn btn-primary" href="index.php?PostController/postView/<?=$posts[$p]['id']?>">Read More <i class="fa fa-angle-right"></i></a>
     </div>
 </div>
 <!-- /.row -->
