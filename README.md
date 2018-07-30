@@ -1,9 +1,7 @@
 # Little Lite MVC Example
-A simple example of MVC application written in PHP without framework.
+A simple example of MVC application written in PHP without framework. 
 
-Thanks to [Perikzzon](http://code.runnable.com/u/perikzzon) developer who wrote the [example](http://code.runnable.com/VDmWiT3TzycRcN6N/php-mvc-simple-for-template) that inspired me to develop this small application MVC.
-
-It is always good to code for fun!
+It is always good to code for fun! 
 
 ## Instructions
 This application does not use database.
