@@ -16,7 +16,6 @@ class PostController extends Controller
     
     public function index()
     {
-        $this->posts = new PostModel();
         $this->view->assign('posts', $this->posts->getPosts());
         $this->view->display('posts.php');
     }
