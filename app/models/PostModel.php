@@ -1,4 +1,6 @@
 <?php
+namespace Models;
+
 class PostModel
 {
     private $posts;
@@ -17,4 +19,3 @@ class PostModel
         return $this->posts;
     }
 }
-?>

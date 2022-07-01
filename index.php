@@ -1,18 +1,25 @@
 <?php
 
+include('vendor/autoload.php');
+
 if(!empty($_SERVER['QUERY_STRING'])) {
     
     $queryArray = explode('/',$_SERVER['QUERY_STRING']);
 
-    $controllerFile = 'controller/' . $queryArray['0'] . '.php';
+    $controllerFile = 'app/controllers/' . $queryArray['0'] . '.php';
 
 } else {
-    $controllerFile = 'controller/DefaultController.php';
+    $controllerFile = 'app/controllers/DefaultController.php';
 }
 
 include_once($controllerFile);
 
-$controller = (isset($queryArray['0'])) ? new $queryArray['0'] : new DefaultController;
+$newController = '\Controllers\DefaultController';
+if (isset($queryArray['0'])) {
+    $newController = '\Controllers\\' . $queryArray['0'];
+}
+
+$controller = new $newController();
 
 if (isset($queryArray['1'])) {
     
