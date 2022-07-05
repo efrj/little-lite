@@ -12,7 +12,7 @@
     <title>Little Lite - Simple MVC Example</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/css/modern-business.css" rel="stylesheet">
@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a>
                     </li>
                     <li>
                         <a href="index.php?PostController/index">Blog</a>
