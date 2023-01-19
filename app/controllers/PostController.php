@@ -17,19 +17,19 @@ class PostController extends Controller
     public function index()
     {
         $this->view->assign('posts', $this->posts->getPosts());
-        $this->view->display('posts.php');
+        $this->view->display('posts');
     }
 
-    public function postView($id)
+    public function detail($id)
     {
         $this->view->assign('post', $this->posts->getPostByID($id));
-        $this->view->display('post.php');
+        $this->view->display('post');
     }
 
     public function postList()
     {
         $this->view->assign('posts',$this->posts->getPosts());
-        $this->view->display('post-list.php');
+        $this->view->display('post-list');
     }
 }
 ?>

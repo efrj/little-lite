@@ -15,10 +15,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/modern-business.css" rel="stylesheet">
+    <link href="/assets/css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,16 +42,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">MVC - By Litte Lite MVC Example</a>
+                <a class="navbar-brand" href="/">MVC - By Litte Lite MVC Example</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a>
+                        <a href="/"><i class="fa fa-home"></i>&nbsp;Home</a>
                     </li>
                     <li>
-                        <a href="index.php?PostController/index">Blog</a>
+                        <a href="/post/index">Blog</a>
                     </li>
                 </ul>
             </div>

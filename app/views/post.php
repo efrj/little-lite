@@ -5,8 +5,8 @@
             <small>By Litte Lite MVC Example</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="index.php?PostController/index">Blog Home</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/post/index">Blog Home</a></li>
             <li class="active"><?=$post['title']?></li>
         </ol>
     </div>
