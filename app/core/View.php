@@ -13,6 +13,6 @@ class View
     public function display($filename)
     {
         extract($this->data);
-        include(__DIR__ . '/../views/' . $filename);
+        include(__DIR__ . '/../views/' . $filename . '.php');
     }
 }
