@@ -8,7 +8,7 @@ class PostModel
     public function getPosts()
     {
         $jsonData = file_get_contents('http://jsonplaceholder.typicode.com/posts');
-        $posts = json_decode($jsonData,true);
+        $posts = json_decode($jsonData, true);
         $this->posts = $posts;
         return $this->posts;
     }
@@ -16,7 +16,7 @@ class PostModel
     public function getPostByID($id)
     {
         $jsonData = file_get_contents('http://jsonplaceholder.typicode.com/posts/' . $id);
-        $post = json_decode($jsonData,true);
+        $post = json_decode($jsonData, true);
         $this->posts = $post;
         return $this->posts;
     }

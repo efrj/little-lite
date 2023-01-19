@@ -2,12 +2,9 @@
 
 include('vendor/autoload.php');
 
-if(!empty(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH))) {
-    
+if(!empty(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) && parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) !== '/')) {
     $queryArray = explode('/', parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
-
     $controllerFile = 'app/controllers/' . ucfirst($queryArray['1']) . 'Controller.php';
-
 } else {
     $controllerFile = 'app/controllers/DefaultController.php';
 }
@@ -22,13 +19,15 @@ if (isset($queryArray['1'])) {
 $controller = new $newController();
 
 if (isset($queryArray['2'])) {
-    
     $action = $queryArray['2'];
-
-    if(isset($queryArray['3'])) {
-        $controller->$action($queryArray['3']);
-    } else {
-        $controller->$action();
-    }
+} else {
+    $action = 'index';
 }
+
+if(isset($queryArray['3'])) {
+    $controller->$action($queryArray['3']);
+} else {
+    $controller->$action();
+}
+
 ?>

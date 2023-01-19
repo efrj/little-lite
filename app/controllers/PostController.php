@@ -20,7 +20,7 @@ class PostController extends Controller
         $this->view->display('posts');
     }
 
-    public function postView($id)
+    public function detail($id)
     {
         $this->view->assign('post', $this->posts->getPostByID($id));
         $this->view->display('post');
