@@ -3,9 +3,19 @@ FROM php:8.0-apache
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Install zip extension and unzip command
+RUN apt-get update && apt-get install -y \
+    zip \
+    unzip
+
+WORKDIR /var/www/html
+COPY . . 
+
+# Install Dependencies
+RUN composer install
+
 # Apache
 RUN a2enmod rewrite
 
-# Permissions
-RUN chown -R www-data:www-data /var/www/html
-RUN chmod -R 777 /var/www/html
+EXPOSE 80
+ENTRYPOINT ["apache2ctl", "-D", "FOREGROUND"]
