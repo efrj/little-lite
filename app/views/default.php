@@ -22,6 +22,4 @@
 </div>
 <!-- /.row -->
 
-<hr>
-
 <?php include('layouts/footer.php'); ?>
