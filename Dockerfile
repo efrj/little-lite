@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-WORKDIR /var/www/html
+WORKDIR /var/www
 COPY . . 
 
 # Install Dependencies

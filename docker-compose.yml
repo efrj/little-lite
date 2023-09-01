@@ -4,9 +4,9 @@ services:
   php:
     build: .
     ports:
-     - "8889:80"
-     - "449:443"
+      - "8889:80"
+      - "449:443"
     volumes:
-     - ./:/var/www/html
-     - /var/www/html/vendor/
+      - ./:/var/www
+      - ./public/:/var/www/html
     container_name: php.little
