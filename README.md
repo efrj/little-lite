@@ -12,8 +12,6 @@ The model used was the [Modern Business](http://startbootstrap.com/template-over
 
 The sample images were taken from the [Loren Flicker](http://loremflickr.com).
 
-Signed as before, this example is very simple and does not use singleton, factory or namespace.
-
 I am designing a mini most advanced framework.
 
 I will be very honored to know that many beginners in PHP may use this example as a case study.
