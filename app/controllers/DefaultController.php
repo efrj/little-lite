@@ -11,4 +11,3 @@ class DefaultController extends Controller
         $this->view->display('default');
     }
 }
-?>
