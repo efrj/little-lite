@@ -33,4 +33,3 @@ class PostController extends Controller
         $this->view->display('post-list');
     }
 }
-?>
