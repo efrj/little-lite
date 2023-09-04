@@ -2,7 +2,7 @@
     "name": "efrj/little-lite",
     "require": {
         "php": "^8.0",
-        "monolog/monolog": "^2.0"
+        "monolog/monolog": "^3.4"
     },
     "autoload": {
         "psr-4": {
