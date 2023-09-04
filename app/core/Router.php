@@ -2,9 +2,20 @@
 
 namespace Core;
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 class Router
 {
     private $controllerNamespace = '\Controllers\\';
+    private $logger;
+    private $logPath = __DIR__ . '/../../logs/app.log';
+    
+    public function __construct()
+    {
+        $this->logger = new Logger('router_logger');
+        $this->logger->pushHandler(new StreamHandler($this->logPath, Logger::DEBUG));
+    }
     
     public function route($url)
     {
@@ -44,7 +55,9 @@ class Router
                 $controller->$action();
             }
         } catch (\Exception $e) {
-            // Handle exceptions here
+            $errorMessage = 'Router Error: ' . $e->getMessage();
+            $this->logger->error($errorMessage);
+            
             header("HTTP/1.1 404 Not Found");
             echo $e->getMessage();
         }
