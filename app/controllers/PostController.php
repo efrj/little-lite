@@ -1,7 +1,8 @@
 <?php
+
 namespace Controllers;
 
-use Controllers\Controller;
+use Core\Controller;
 use Models\PostModel;
 
 class PostController extends Controller
