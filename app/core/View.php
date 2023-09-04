@@ -8,8 +8,8 @@ use Monolog\Logger;
 class View
 {
     public $data = array();
-    private $logger; // Adicione uma propriedade para o Logger
-    private $logPath = __DIR__ . '/../logs/app.log';
+    private $logger;
+    private $logPath = __DIR__ . '/../../logs/app.log';
 
     public function __construct()
     {
